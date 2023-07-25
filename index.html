@@ -7,10 +7,229 @@
     <!--Tailwind and DaisyUI-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!--Lato Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<!--Font Awesome-->
+<script src="https://kit.fontawesome.com/4d1d1329e2.js" crossorigin="anonymous"></script>
+<!--Custom Color-->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'primary-color': '#F85559',
+          }
+        }
+      }
+    }
+  </script>
+
+<style>
+    .font-lato{
+        font-family: 'Lato', sans-serif;
+    }
+</style>
 </head>
-<body>
-    <header></header>
-    <main></main>
+<body class="font-lato">
+    <!--nav bar-->
+   <header class="max-w-screen-xl mx-auto my-10">
+    <nav class="bg-primary-color rounded-full pb-3 flex justify-center items-center">
+        <div class="navbar ">
+            <div class="navbar-start">
+              <div class="dropdown ">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52">
+                    <ul class="menu menu-horizontal px-1 list-none text-white justify-evenly font-medium text-base">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                      </ul>
+                </ul>
+              </div>
+              <div class="hidden lg:flex list-none text-white justify-evenly font-medium text-base">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
+                  </ul>
+              </div>
+             
+            </div>
+            <div class="navbar-center flex justify-center items-center">
+                <a class="btn btn-ghost normal-case text-4xl font-extrabold text-white items-center">
+                 <img  src="./images/logo.png" alt="">
+                 Fruit Burst
+                </a>
+            </div>
+            <div class="navbar-end hidden lg:flex ">
+              <a class="">
+                <button class="btn btn-ghost rounded-full pl-7 pr-8 bg-white mt-2 mr-8 text-[#12121266] capitalize gap-20 text-base">
+                    Search Here
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                   
+                  </button>
+            </a>
+            </div>
+          </div>
+    </nav>
+    <!--banner section or carousel-->
+     <section class="my-10">
+        <div class="carousel w-full relative ">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="./images/banner4.png" class="w-full" />
+              
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="./images/banner1.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="./images/banner2.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide4" class="carousel-item relative w-full">
+              <img src="./images/banner3.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <!--banner content-->
+          <div class="absolute text-white text-center flex justify-center items-center">
+            
+            <!-- <div>
+                <h2 class="text-7xl font-bold">Exotic tastes at your <br> doorstep</h2>
+            <p class="text-lg font-medium">We supply highly quality organic products</p>
+            <button class="bg-primary-color text-white text-xl font-extrabold rounded-md pt-5 pl-7 pb-5 pr-7">Shop Now</button>
+            </div> -->
+          </div>
+          
+          </div>
+          
+          
+          
+     </section>
+   </header>
+    <main class="max-w-screen-xl mx-auto my-10">
+        <!--deal section-->
+        <section>
+            <div class="flex justify-between flex-col lg:flex-row">
+                <div class="deal-content">
+                    <h3 class="text-[#121212] font-extrabold font-lato text-4xl">Deal of the day</h3>
+                    <p class="text-[#12121299] text-base font-medium">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <div>
+                    <div class="grid grid-flow-col gap-5 text-center auto-cols-max text-[#121212] font-extrabold font-lato text-3xl">
+                        <div class="flex flex-col ">
+                          <span class="countdown ">
+                            <span style="--value:29;"></span>:
+                          </span>
+                          <span class="text-sm text-[#12121299]">Days</span>
+                        </div> 
+                        <div class="flex flex-col">
+                          <span class="countdown ">
+                            <span style="--value:15;"></span>:
+                          </span>
+                          <span class="text-sm text-[#12121299]">Hours</span>
+                          
+                        </div> 
+                        <div class="flex flex-col">
+                          <span class="countdown ">
+                            <span style="--value:25;"></span>:
+                          </span>
+                          <span class="text-sm text-[#12121299]"> Minutes</span>
+                         
+                        </div> 
+                        <div class="flex flex-col">
+                          <span class="countdown">
+                            <span style="--value:08;"></span>:
+                          </span>
+                          <span class="text-sm text-[#12121299]"> Seconds</span>
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <!--team section-->
+        <section class="my-10">
+            <div class="hero min-h-screen" style="background-image: url('./images/banner1.png');">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
+                    <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                        <div>
+                            <img src="./images/member1.png" alt="">
+                            <h3>Awlad Hossain</h3>
+                            <h4>Fruits Expert</h4>
+                          <div class="gap-2">
+                            <i class="fa-brands fa-facebook-f bg-red-500 text-white
+                            "></i>
+                            <i class="fa-brands fa-twitter bg-red-500 text-white"></i>
+                            <i class="fa-brands fa-linkedin-in bg-red-500 text-white"></i>
+                          </div>
+                        </div>
+                        <div>
+                            <img src="./images/member1.png" alt="">
+                            <h3>Awlad Hossain</h3>
+                            <h4>Fruits Expert</h4>
+                          <div class="gap-2">
+                            <i class="fa-brands fa-facebook-f bg-red-500 text-white
+                            "></i>
+                            <i class="fa-brands fa-twitter bg-red-500 text-white"></i>
+                            <i class="fa-brands fa-linkedin-in bg-red-500 text-white"></i>
+                          </div>
+                        </div>
+                        <div>
+                            <img src="./images/member1.png" alt="">
+                            <h3>Awlad Hossain</h3>
+                            <h4>Fruits Expert</h4>
+                          <div class="gap-2">
+                            <i class="fa-brands fa-facebook-f bg-red-500 text-white
+                            "></i>
+                            <i class="fa-brands fa-twitter bg-red-500 text-white"></i>
+                            <i class="fa-brands fa-linkedin-in bg-red-500 text-white"></i>
+                          </div>
+                        </div>
+                        <div>
+                            <img src="./images/member1.png" alt="">
+                            <h3>Awlad Hossain</h3>
+                            <h4>Fruits Expert</h4>
+                          <div class="gap-2">
+                            <i class="fa-brands fa-facebook-f bg-red-500 text-white
+                            "></i>
+                            <i class="fa-brands fa-twitter bg-red-500 text-white"></i>
+                            <i class="fa-brands fa-linkedin-in bg-red-500 text-white"></i>
+                          </div>
+                        </div>
+
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+        </section>
+    
+    </main>
     <footer></footer>
 </body>
 </html>
